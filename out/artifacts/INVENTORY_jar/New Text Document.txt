@@ -1,0 +1,1 @@
+java --module-path C:\openjfx-16_windows-x64_bin-sdk\javafx-sdk-16\lib --add-modules barcode4j,javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.media,javafx.swing,javafx.web -jar INVENTORY.jar

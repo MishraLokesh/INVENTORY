@@ -25,8 +25,8 @@ import java.util.Objects;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.FileOutputStream;
-//import org.krysalis.barcode4j.impl.code128.Code128Bean;
-//import org.krysalis.barcode4j.output.bitmap.BitmapCanvasProvider;
+import org.krysalis.barcode4j.impl.code128.Code128Bean;
+import org.krysalis.barcode4j.output.bitmap.BitmapCanvasProvider;
 
 public class Controller implements Initializable {
     private Stage stage;
@@ -318,6 +318,7 @@ String stockImage;
 //                fos.write(baos.toByteArray());
 //                fos.flush();
 //                fos.close();
+
 
 
                     root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AddItem.fxml")));

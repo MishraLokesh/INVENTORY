@@ -3,8 +3,6 @@ package sample;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-
-
 public class DatabaseConnection {
 
     public Connection databaseLink;

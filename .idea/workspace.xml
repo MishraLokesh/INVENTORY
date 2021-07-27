@@ -1,9 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="INVENTORY:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2dba539b-8281-4a89-9bc4-6cae48c6a378" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/DeleteTableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/DeleteTableController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/INVENTORY.iml" beforeDir="false" afterPath="$PROJECT_DIR$/INVENTORY.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/INVENTORY/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/INVENTORY/sample/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/INVENTORY/sample/DatabaseConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/INVENTORY/sample/DatabaseConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/INVENTORY/sample/DatabaseConnectionDelete.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/INVENTORY/sample/DatabaseConnectionDelete.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/INVENTORY/sample/DatabaseConnectionNext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/INVENTORY/sample/DatabaseConnectionNext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/INVENTORY/sample/DeleteExistingProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/INVENTORY/sample/DeleteExistingProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/INVENTORY/sample/DeleteLogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/INVENTORY/sample/DeleteLogController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/INVENTORY/sample/DeleteTableController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/INVENTORY/sample/DeleteTableController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/INVENTORY/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/INVENTORY/sample/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/INVENTORY/sample/SearchTableController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/INVENTORY/sample/SearchTableController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/INVENTORY/sample/addExistingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/INVENTORY/sample/addExistingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/INVENTORY/sample/adminDeleteTableController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/INVENTORY/sample/adminDeleteTableController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/INVENTORY/sample/adminModelTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/INVENTORY/sample/adminModelTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/INVENTORY/sample/adminSearchTableController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/INVENTORY/sample/adminSearchTableController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/INVENTORY/sample/deleteLogModelTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/INVENTORY/sample/deleteLogModelTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/INVENTORY/sample/modelTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/INVENTORY/sample/modelTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/INVENTORY/sample/modelTableDelete.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/INVENTORY/sample/modelTableDelete.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/INVENTORY/sample/monthlyLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/INVENTORY/sample/monthlyLog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/DatabaseConnectionNext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/DatabaseConnectionNext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/DeleteExistingProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/DeleteExistingProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/DeleteLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/DeleteLogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/addExistingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/addExistingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/adminDeleteTableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/adminDeleteTableController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +72,9 @@
     <setting file="file://$PROJECT_DIR$/src/sample/Search.fxml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1vDlGd9WGE3SsgNYtuNAV5b0FV3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -50,9 +83,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.18358831" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.13157892" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
