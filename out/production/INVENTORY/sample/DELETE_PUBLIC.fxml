@@ -47,8 +47,14 @@
             <Font name="Arial Black" size="18.0" />
          </font>
       </Button>
-      <TextField fx:id="selectedQuantity" layoutX="920.0" layoutY="60.0" prefHeight="25.0" prefWidth="233.0" AnchorPane.rightAnchor="136.4" AnchorPane.topAnchor="60.0" />
-      <Label alignment="CENTER" layoutX="901.0" layoutY="18.0" prefHeight="35.0" prefWidth="301.0" text="COUNT" AnchorPane.rightAnchor="87.39999999999998" AnchorPane.topAnchor="18.0">
+      <TextField fx:id="selectedQuantity" layoutX="958.0" layoutY="23.0" prefHeight="25.0" prefWidth="233.0" promptText="Count" AnchorPane.rightAnchor="98.40000000000009" AnchorPane.topAnchor="23.0" />
+      <Label alignment="CENTER" layoutX="811.0" layoutY="18.0" prefHeight="35.0" prefWidth="134.0" text="COUNT" AnchorPane.rightAnchor="344.6" AnchorPane.topAnchor="18.0">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <TextField fx:id="employee_id" layoutX="958.0" layoutY="60.0" prefHeight="25.0" prefWidth="233.0" promptText="Employee ID" />
+      <Label alignment="CENTER" layoutX="811.0" layoutY="55.0" prefHeight="35.0" prefWidth="134.0" text="EMP ID">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>

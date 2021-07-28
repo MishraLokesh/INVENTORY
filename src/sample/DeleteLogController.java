@@ -47,6 +47,8 @@ public class DeleteLogController implements Initializable {
     @FXML
     public TableColumn<deleteLogModelTable, String> col_partNo = new TableColumn<>();
     @FXML
+    public TableColumn<deleteLogModelTable, String> col_employeeID = new TableColumn<>();
+    @FXML
     public TableColumn<deleteLogModelTable, String> col_refPartNo = new TableColumn<>();
     @FXML
     public TableColumn<deleteLogModelTable, String> col_addOn = new TableColumn<>();
@@ -102,6 +104,7 @@ public class DeleteLogController implements Initializable {
                 observableList.add(new deleteLogModelTable(
                         queryOutput.getString("part_no"),
                         queryOutput.getString("ref_part_no"),
+                        queryOutput.getString("emp_id"),
                         queryOutput.getString("add_on"),
                         queryOutput.getInt("quantity"),
                         queryOutput.getInt("transaction_qt"),
@@ -120,6 +123,7 @@ public class DeleteLogController implements Initializable {
 
             col_partNo.setCellValueFactory(new PropertyValueFactory<>("P_partNumber"));
             col_refPartNo.setCellValueFactory(new PropertyValueFactory<>("P_refPartNumber"));
+            col_employeeID.setCellValueFactory(new PropertyValueFactory<>("P_emp_id"));
             col_quantityUsed.setCellValueFactory(new PropertyValueFactory<>("P_quantityUsed"));
             col_quantity.setCellValueFactory(new PropertyValueFactory<>("P_quantity"));
             col_partFor.setCellValueFactory(new PropertyValueFactory<>("P_partFor"));
@@ -294,7 +298,8 @@ public class DeleteLogController implements Initializable {
                         "`prefix`,\n" +
                         "`comment`,\n" +
                         "`transaction_dt`,\n" +
-                        "`transaction_qt`) VALUES ('" + selectedItems.get(0).getP_partNumber() + "','" + selectedItems.get(0).getP_refPartNumber() + "','" + selectedItems.get(0).getP_addOn() + "','" + selectedItems.get(0).getP_quantity() + "','" + selectedItems.get(0).getP_partFor() + "','" + selectedItems.get(0).getP_company() + "','" + selectedItems.get(0).getP_invDate() + "','" + selectedItems.get(0).getP_sourceOfPurchase() + "','" + selectedItems.get(0).getP_landingPurchaseValue() + "','" + selectedItems.get(0).getP_sellingValue() + "','" + selectedItems.get(0).getP_stockLocation() + "','" + selectedItems.get(0).getP_setOf() + "','" + selectedItems.get(0).getP_prefix() + "','" + selectedItems.get(0).getP_comment() + "','" + selectedItems.get(0).getP_date_time() + "','" + selectedItems.get(0).getP_quantityUsed() + "'" + ")";
+                        "`emp_id`,\n" +
+                        "`transaction_qt`) VALUES ('" + selectedItems.get(0).getP_partNumber() + "','" + selectedItems.get(0).getP_refPartNumber() + "','" + selectedItems.get(0).getP_addOn() + "','" + selectedItems.get(0).getP_quantity() + "','" + selectedItems.get(0).getP_partFor() + "','" + selectedItems.get(0).getP_company() + "','" + selectedItems.get(0).getP_invDate() + "','" + selectedItems.get(0).getP_sourceOfPurchase() + "','" + selectedItems.get(0).getP_landingPurchaseValue() + "','" + selectedItems.get(0).getP_sellingValue() + "','" + selectedItems.get(0).getP_stockLocation() + "','" + selectedItems.get(0).getP_setOf() + "','" + selectedItems.get(0).getP_prefix() + "','" + selectedItems.get(0).getP_comment() + "','" + selectedItems.get(0).getP_date_time() + "','" + selectedItems.get(0).getP_emp_id() + "','" + selectedItems.get(0).getP_quantityUsed() + "'" + ")";
 
 //            connectQuery1 = flag ? String.format("UPDATE `inventory_management`.`inward_item` SET `quantity` = 0 WHERE `part_no` = '%s';",selectedProdID) :  String.format("UPDATE `inventory_management`.`inward_item` SET `quantity` = (SELECT `quantity` FROM (SELECT `quantity` FROM inventory_management.inward_item WHERE `part_no` = '%s') as lpv ) - %s WHERE `part_no` = '%s';",selectedProdID,selectedItems.get(0).getP_quantity(),selectedProdID);
 
@@ -390,6 +395,7 @@ public class DeleteLogController implements Initializable {
                     observableList.add(new deleteLogModelTable(
                             queryOutput.getString("part_no"),
                             queryOutput.getString("ref_part_no"),
+                            queryOutput.getString("emp_id"),
                             queryOutput.getString("add_on"),
                             queryOutput.getInt("quantity"),
                             queryOutput.getInt("transaction_qt"),

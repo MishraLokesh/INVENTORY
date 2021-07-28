@@ -18,6 +18,7 @@
         <TableView fx:id="tableView" layoutX="16.0" layoutY="84.0" prefHeight="504.0" prefWidth="1259.0" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="14.799999999999955" AnchorPane.topAnchor="84.0">
             <columns>
                 <TableColumn fx:id="col_date_time" minWidth="5.3333740234375" prefWidth="182.66665649414062" text="TRANSACTION DATE_TIME" />
+                <TableColumn fx:id="col_employeeID" minWidth="0.0" prefWidth="153.33335876464844" text="EMPLOYEE ID" />
                 <TableColumn fx:id="col_partNo" minWidth="0.0" prefWidth="153.33335876464844" text="PART NUMBER" />
                 <TableColumn fx:id="col_refPartNo" minWidth="0.0" prefWidth="153.33335876464844" text="REFERENCE PART NUMBER" />
                 <TableColumn fx:id="col_quantityUsed" minWidth="0.0" prefWidth="153.33335876464844" text="QUANTITY USED" />

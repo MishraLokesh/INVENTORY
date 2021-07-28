@@ -4,9 +4,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
-import java.io.File;
+import java.io.*;
 import java.net.URL;
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -20,13 +22,18 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import java.io.IOException;
+
 import java.util.Objects;
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
-import java.io.FileOutputStream;
-import org.krysalis.barcode4j.impl.code128.Code128Bean;
-import org.krysalis.barcode4j.output.bitmap.BitmapCanvasProvider;
+
+//import org.apache.poi.xssf.usermodel.XSSFRow;
+//import org.apache.poi.xssf.usermodel.XSSFSheet;
+//import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+//import org.krysalis.barcode4j.impl.code128.Code128Bean;
+//import org.krysalis.barcode4j.output.bitmap.BitmapCanvasProvider;
+
+import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class Controller implements Initializable {
     private Stage stage;
@@ -871,4 +878,76 @@ String stockImage;
         stage.setScene(scene);
         stage.show();
     }
+//    public void downloadLog(ActionEvent actionEvent) throws SQLException {
+//        JFileChooser excelFileChooser = new JFileChooser("C:\\Users\\RAHUL\\Desktop");
+//        excelFileChooser.setDialogTitle("Save As");
+//        FileNameExtensionFilter fnef = new FileNameExtensionFilter("EXCEL FILES", "XLS", "XLSX", "XLSM");
+//        excelFileChooser.setFileFilter(fnef);
+//        int excelChooser = excelFileChooser.showSaveDialog(null);
+//
+//        if (excelChooser == JFileChooser.APPROVE_OPTION) {
+//
+//            DatabaseConnection connectNow = new DatabaseConnection();
+//            Connection connectDB = connectNow.getConnection();
+//
+//            try {
+//                String connectQuery = "SELECT * FROM `deletelog`.`deletemaster`";
+//
+//                Statement statement = connectDB.createStatement();
+//                ResultSet queryOutput = statement.executeQuery(connectQuery);
+//
+//                XSSFWorkbook excelJTableExporter = new XSSFWorkbook();
+//                XSSFSheet excelSheet = excelJTableExporter.createSheet("JTable Sheet");
+//
+//                XSSFRow header=excelSheet.createRow(0);
+//                header.createCell(0).setCellValue("PART NUMBER");
+//                header.createCell(1).setCellValue("REFERENCE PART NUMBER");
+//                header.createCell(2).setCellValue("ADD ON");
+//                header.createCell(3).setCellValue("QUANTITY USED");
+//                header.createCell(4).setCellValue("PART FOR");
+//                header.createCell(5).setCellValue("COMPANY");
+//                header.createCell(6).setCellValue("INVENTORY DATE");
+//                header.createCell(7).setCellValue("SOURCE OF PURCHASE");
+//                header.createCell(8).setCellValue("LANDING PURCHASE VALUE");
+//                header.createCell(9).setCellValue("SELLING VALUE");
+//                header.createCell(10).setCellValue("STOCK LOCATION");
+//                header.createCell(11).setCellValue("SET OF");
+//                header.createCell(12).setCellValue("PREFIX");
+//                header.createCell(13).setCellValue("COMMENT");
+//
+//
+//                int index = 1;
+//                while (queryOutput.next()) {
+//                    XSSFRow row = excelSheet.createRow(index);
+//                    row.createCell(0).setCellValue(queryOutput.getString("part_no"));
+//                    row.createCell(1).setCellValue(queryOutput.getString("ref_part_no"));
+//                    row.createCell(2).setCellValue(queryOutput.getString("add_on"));
+//                    row.createCell(3).setCellValue(queryOutput.getString("quantity"));
+//                    row.createCell(4).setCellValue(queryOutput.getString("part_for"));
+//                    row.createCell(5).setCellValue(queryOutput.getString("company"));
+//                    row.createCell(6).setCellValue(queryOutput.getString("inventory_date"));
+//                    row.createCell(7).setCellValue(queryOutput.getString("source_of_p"));
+//                    row.createCell(8).setCellValue(queryOutput.getString("landing_pv"));
+//                    row.createCell(9).setCellValue(queryOutput.getString("sell_v"));
+//                    row.createCell(10).setCellValue(queryOutput.getString("stock_loc"));
+//                    row.createCell(11).setCellValue(queryOutput.getString("setof"));
+//                    row.createCell(12).setCellValue(queryOutput.getString("prefix"));
+//                    row.createCell(13).setCellValue(queryOutput.getString("comment"));
+//
+//                    index++;
+//                }
+//                FileOutputStream fileOut = new FileOutputStream(excelFileChooser.getSelectedFile() + ".xlsx");
+//                BufferedOutputStream bFIleOut=new BufferedOutputStream(fileOut);
+//                excelJTableExporter.write(bFIleOut);
+//                bFIleOut.close();
+//                fileOut.close();
+//                statement.close();
+//                queryOutput.close();
+//
+//
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    }
 }

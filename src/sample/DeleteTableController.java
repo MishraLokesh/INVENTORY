@@ -27,6 +27,7 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class DeleteTableController implements Initializable {
+    public TextField employee_id;
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -231,8 +232,8 @@ public class DeleteTableController implements Initializable {
     public void DeleteLog(ActionEvent actionEvent) throws IOException {
         ObservableList<modelTable> selectedItems = tableView.getSelectionModel().getSelectedItems();
         String E1 = "Please select a valid row and then proceed for delete.";
-        String E2 = "Please enter a valid amount of quantity and then proceed for delete.";
-        if (selectedItems.size()==0 || selectedQuantity.getText().length()==0){
+        String E2 = "Please enter a valid employee id and quantity and then proceed for delete.";
+        if (selectedItems.size()==0 || selectedQuantity.getText().length()==0 || employee_id.getText().length()==0){
             Stage stage = (Stage) myAnchorPane.getScene().getWindow();
             Alert.AlertType type = Alert.AlertType.ERROR;
             Alert alert = new Alert(type, "");
@@ -248,6 +249,7 @@ public class DeleteTableController implements Initializable {
 
 //        String connectQuery1 = String.format("DELETE FROM `inventory_management`.`inward_item` WHERE part_no = '%s'", selectedProdID);
             String selectedquantity = selectedQuantity.getText();
+            String employeeID = employee_id.getText();
             int newCount = selectedItems.get(0).getP_quantity() - Integer.parseInt(selectedquantity);
             ResultSet queryOutput;
 
@@ -281,7 +283,8 @@ public class DeleteTableController implements Initializable {
                     "`setof`,\n" +
                     "`prefix`,\n" +
                     "`comment`,\n" +
-                    "`transaction_qt`) VALUES ('" + selectedItems.get(0).getP_partNumber() + "','" + selectedItems.get(0).getP_refPartNumber() + "','" + selectedItems.get(0).getP_addOn() + "','" + newCount + "','" + selectedItems.get(0).getP_partFor() + "','" + selectedItems.get(0).getP_company() + "','" + selectedItems.get(0).getP_invDate() + "','" + selectedItems.get(0).getP_sourceOfPurchase() + "','" + landing_pv + "','" + sell_v + "','" + selectedItems.get(0).getP_stockLocation() + "','" + selectedItems.get(0).getP_setOf() + "','" + selectedItems.get(0).getP_prefix() + "','" + selectedItems.get(0).getP_comment() + "','" + selectedquantity + "'" + ")";
+                    "`emp_id`,\n" +
+                    "`transaction_qt`) VALUES ('" + selectedItems.get(0).getP_partNumber() + "','" + selectedItems.get(0).getP_refPartNumber() + "','" + selectedItems.get(0).getP_addOn() + "','" + newCount + "','" + selectedItems.get(0).getP_partFor() + "','" + selectedItems.get(0).getP_company() + "','" + selectedItems.get(0).getP_invDate() + "','" + selectedItems.get(0).getP_sourceOfPurchase() + "','" + landing_pv + "','" + sell_v + "','" + selectedItems.get(0).getP_stockLocation() + "','" + selectedItems.get(0).getP_setOf() + "','" + selectedItems.get(0).getP_prefix() + "','" + selectedItems.get(0).getP_comment() + "','" + selectedquantity + "','" + employeeID + "'"+")";
 //        System.out.println(connectQuery3);
 //         String connectQuery2 = String.format("UPDATE `deletelog`.`outward_item` SET `quantity` = (SELECT `quantity` FROM (SELECT `quantity` FROM deletelog.outward_item WHERE `part_no` = '%s') as lpv ) - %s WHERE `part_no` = '%s';",selectedProdID,selectedquantity,selectedProdID);
 
@@ -320,6 +323,7 @@ public class DeleteTableController implements Initializable {
                 stage.setScene(scene);
                 stage.show();
             }
+
 //        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample.fxml")));
 //        stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
 //        scene = new Scene(root);

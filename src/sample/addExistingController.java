@@ -239,16 +239,29 @@ public class addExistingController implements Initializable {
 //         String connectQuery2 = String.format("UPDATE `deletelog`.`outward_item` SET `quantity` = (SELECT `quantity` FROM (SELECT `quantity` FROM deletelog.outward_item WHERE `part_no` = '%s') as lpv ) - %s WHERE `part_no` = '%s';",selectedProdID,selectedquantity,selectedProdID);
 
             String connectQuery2 = String.format("UPDATE `inventory_management`.`inward_item` SET `quantity` = (SELECT `quantity` FROM (SELECT `quantity` FROM inventory_management.inward_item WHERE `part_no` = '%s') as lpv ) + %s WHERE `part_no` = '%s';", selectedProdID, selectedquantity, selectedProdID);
-
+            String connectQuery3 = "INSERT INTO `deletelog`.`deletemaster` (\n" +
+                    "`part_no`,\n" +
+                    "`ref_part_no`,\n" +
+                    "`add_on`,\n" +
+                    "`quantity`,\n" +
+                    "`part_for`,\n" +
+                    "`company`,\n" +
+                    "`inventory_date`,\n" +
+                    "`source_of_p`,\n" +
+                    "`landing_pv`,\n" +
+                    "`sell_v`,\n" +
+                    "`stock_loc`,\n" +
+                    "`setof`,\n" +
+                    "`prefix`,\n" +
+                    "`comment`,\n" +
+                    "`transaction_qt`) VALUES ('" + selectedItems.get(0).getP_partNumber() + "','" + selectedItems.get(0).getP_refPartNumber() + "','" + selectedItems.get(0).getP_addOn() + "','" + selectedItems.get(0).getP_quantity() + "','" + selectedItems.get(0).getP_partFor() + "','" + selectedItems.get(0).getP_company() + "','" + selectedItems.get(0).getP_invDate() + "','" + selectedItems.get(0).getP_sourceOfPurchase() + "','" + selectedItems.get(0).getP_landingPurchaseValue() + "','" + selectedItems.get(0).getP_sellingValue() + "','" + selectedItems.get(0).getP_stockLocation() + "','" + selectedItems.get(0).getP_setOf() + "','" + selectedItems.get(0).getP_prefix() + "','" + selectedItems.get(0).getP_comment() + "','" + selectedquantity + "'" + ")";
             try {
                 DatabaseConnectionDelete connectNow = new DatabaseConnectionDelete();
                 Connection connectDB = connectNow.getConnection();
 
                 Statement statement = connectDB.createStatement();
-//            statement.executeUpdate(connectQuery);
                 statement.executeUpdate(connectQuery2);
-//            statement.executeUpdate(connectQuery3);
-
+                statement.executeUpdate(connectQuery3);
 
             } catch (Exception e) {
                 e.printStackTrace();

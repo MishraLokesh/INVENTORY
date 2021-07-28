@@ -39,6 +39,8 @@ public class monthlyLog  implements Initializable {
     @FXML
     public TableColumn<deleteLogModelTable, String> col_refPartNo = new TableColumn<>();
     @FXML
+    public TableColumn<deleteLogModelTable, String> col_employeeID = new TableColumn<>();
+    @FXML
     public TableColumn<deleteLogModelTable, String> col_addOn = new TableColumn<>();
     @FXML
     public TableColumn<deleteLogModelTable, Integer> col_quantity = new TableColumn<>();
@@ -93,6 +95,7 @@ public class monthlyLog  implements Initializable {
                 observableList.add(new deleteLogModelTable(
                         queryOutput.getString("part_no"),
                         queryOutput.getString("ref_part_no"),
+                        queryOutput.getString("emp_id"),
                         queryOutput.getString("add_on"),
                         queryOutput.getInt("quantity"),
                         queryOutput.getInt("transaction_qt"),
@@ -111,6 +114,7 @@ public class monthlyLog  implements Initializable {
 
             col_partNo.setCellValueFactory(new PropertyValueFactory<>("P_partNumber"));
             col_refPartNo.setCellValueFactory(new PropertyValueFactory<>("P_refPartNumber"));
+            col_employeeID.setCellValueFactory(new PropertyValueFactory<>("P_emp_id"));
             col_quantityUsed.setCellValueFactory(new PropertyValueFactory<>("P_quantityUsed"));
             col_quantity.setCellValueFactory(new PropertyValueFactory<>("P_quantity"));
             col_partFor.setCellValueFactory(new PropertyValueFactory<>("P_partFor"));
@@ -197,6 +201,7 @@ public class monthlyLog  implements Initializable {
                         observableList.add(new deleteLogModelTable(
                                 queryOutput.getString("part_no"),
                                 queryOutput.getString("ref_part_no"),
+                                queryOutput.getString("emp_id"),
                                 queryOutput.getString("add_on"),
                                 queryOutput.getInt("quantity"),
                                 queryOutput.getInt("transaction_qt"),
