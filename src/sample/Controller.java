@@ -637,7 +637,8 @@ String stockImage;
                 code128.generateBarcode(canvas, myString);
                 canvas.finish();
                 //write to png file
-                FileOutputStream fos = new FileOutputStream("C:\\Users\\4manm\\IdeaProjects\\GG\\INVENTORY\\Barcode\\Barcode" + image_name);
+                String directory = System.getProperty("user.dir");
+                FileOutputStream fos = new FileOutputStream(directory+"\\Barcode\\" + image_name);
                 fos.write(baos.toByteArray());
                 fos.flush();
                 fos.close();
