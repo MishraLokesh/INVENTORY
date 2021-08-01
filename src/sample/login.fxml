@@ -40,19 +40,19 @@
                 </Label>
             </children>
         </AnchorPane>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0">
-         <children>
-            <Button fx:id="back" mnemonicParsing="false" onAction="#goSample" prefHeight="46.0" prefWidth="115.0" style="-fx-background-color: #C4FCF0;" text="&lt;- BACK" textAlignment="JUSTIFY" textFill="#005575" AnchorPane.leftAnchor="0.0">
-               <font>
-                  <Font name="System Bold" size="21.0" />
-               </font>
-            </Button>
-            <Button fx:id="HOME" layoutX="1193.0" layoutY="-3.0" mnemonicParsing="false" onAction="#goSample" prefHeight="46.0" prefWidth="100.0" style="-fx-background-color: #C4FCF0;" text="HOME" textAlignment="JUSTIFY" textFill="#005575" AnchorPane.rightAnchor="-10.0">
-               <font>
-                  <Font name="System Bold" size="21.0" />
-               </font>
-            </Button>
-         </children>
-      </AnchorPane>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <Button fx:id="back" mnemonicParsing="false" onAction="#goSample" prefHeight="46.0" prefWidth="115.0" style="-fx-background-color: #C4FCF0;" text="&lt;- BACK" textAlignment="JUSTIFY" textFill="#005575" AnchorPane.leftAnchor="0.0">
+                    <font>
+                        <Font name="System Bold" size="21.0" />
+                    </font>
+                </Button>
+                <Button fx:id="HOME" layoutX="1193.0" layoutY="-3.0" mnemonicParsing="false" onAction="#goSample" prefHeight="46.0" prefWidth="100.0" style="-fx-background-color: #C4FCF0;" text="HOME" textAlignment="JUSTIFY" textFill="#005575" AnchorPane.rightAnchor="-10.0">
+                    <font>
+                        <Font name="System Bold" size="21.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
     </children>
 </GridPane>
