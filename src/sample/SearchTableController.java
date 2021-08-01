@@ -1,5 +1,6 @@
 package sample;
-
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -24,6 +25,8 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Objects;
 import java.util.ResourceBundle;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class SearchTableController implements Initializable {
     private Stage stage;
@@ -59,6 +62,8 @@ public class SearchTableController implements Initializable {
     public TableColumn<modelTable,String> col_prefix=new TableColumn<>();
     @FXML
     public TableColumn<modelTable,String> col_comment=new TableColumn<>();
+    @FXML
+    public TableColumn<modelTable,ImageView> col_img=new TableColumn<>();
 
     @FXML
     private TextField enteredProdCode;
@@ -82,6 +87,7 @@ public class SearchTableController implements Initializable {
                 observableList.add(new modelTable(
                         queryOutput.getString("part_no"),
                         queryOutput.getString("ref_part_no"),
+                        queryOutput.getString("stock_loc"),
                         queryOutput.getString("add_on"),
                         queryOutput.getInt("quantity"),
                         queryOutput.getString("part_for"),
@@ -96,6 +102,9 @@ public class SearchTableController implements Initializable {
 
             col_partNo.setCellValueFactory(new PropertyValueFactory<>("P_partNumber"));
             col_refPartNo.setCellValueFactory(new PropertyValueFactory<>("P_refPartNumber"));
+
+            col_img.setCellValueFactory(new PropertyValueFactory<>("images"));
+
             col_addOn.setCellValueFactory(new PropertyValueFactory<>("P_addOn"));
             col_quantity.setCellValueFactory(new PropertyValueFactory<>("P_quantity"));
             col_partFor.setCellValueFactory(new PropertyValueFactory<>("P_partFor"));

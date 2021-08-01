@@ -93,6 +93,7 @@ public class DeleteTableController implements Initializable {
                 observableList.add(new modelTable(
                         queryOutput.getString("part_no"),
                         queryOutput.getString("ref_part_no"),
+                        queryOutput.getString("stock_loc"),
                         queryOutput.getString("add_on"),
                         queryOutput.getInt("quantity"),
                         queryOutput.getString("part_for"),

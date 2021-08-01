@@ -3,6 +3,11 @@ package sample;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
+import java.io.File;
+import java.util.Objects;
 
 public class modelTable {
     @FXML
@@ -29,6 +34,18 @@ public class modelTable {
     private SimpleStringProperty P_prefix;
     @FXML
     private SimpleStringProperty P_comment;
+
+    @FXML
+    private ImageView images;
+
+    public ImageView getImages(){
+        return this.images;
+    }
+    public void setImages(String URL){
+        Image anImage = new Image(URL);
+        this.images = new ImageView(anImage);
+    }
+
 
     public String getP_partNumber() { return P_partNumber.get(); }
     public SimpleStringProperty p_partNumberProperty() {
@@ -115,10 +132,12 @@ public class modelTable {
     public void setP_comment(String p_comment) { P_comment = new SimpleStringProperty(p_comment); }
 
 
-    public modelTable(String p_partNumber, String p_refPartNumber,String p_addOn, int p_quantity, String p_partFor, String p_company, String p_invDate,
+    public modelTable(String p_partNumber, String p_refPartNumber,String URL,String p_addOn, int p_quantity, String p_partFor, String p_company, String p_invDate,
                            String p_sourceOfPurchase, String p_stockLocation, String p_setOf, String p_prefix, String p_comment) {
         this.P_partNumber = new SimpleStringProperty(p_partNumber);
         this.P_refPartNumber = new SimpleStringProperty(p_refPartNumber);
+
+        this.images = new ImageView(new Image(URL));
         this.P_addOn = new SimpleStringProperty(p_addOn);
         this.P_quantity = new SimpleIntegerProperty(p_quantity);
         this.P_partFor = new SimpleStringProperty(p_partFor);

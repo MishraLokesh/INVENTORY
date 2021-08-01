@@ -279,6 +279,7 @@ String stockImage;
         String company = Company.getValue();
         String inventoryDate = InventoryDate.getValue().toString();
         String StockLocation = stockImage;
+        StockLocation = "file:///" + StockLocation.replace("\\", "/");
         String Comment = "";
 
         String setOf = "";
@@ -440,6 +441,7 @@ String stockImage;
             String company = Company.getValue();
             String inventoryDate = InventoryDate.getValue().toString();
             String StockLocation = stockImage;
+            StockLocation = "file:///" + StockLocation.replace("\\", "/");
             String Comment = "";
 
             String setOf = setof.getText();
@@ -597,6 +599,7 @@ String stockImage;
         String company = "";
         String inventoryDate = InventoryDate.getValue().toString();
         String StockLocation = stockImage;
+        StockLocation = "file:///" + StockLocation.replace("\\", "/");
         String comment = MiscComment.getText();
 
         String setOf = "";
