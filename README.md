@@ -1,3 +1,2 @@
 # INVENTORY
-WORK TO BE DONE  
 
